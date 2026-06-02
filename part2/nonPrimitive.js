@@ -21,4 +21,3 @@ let today = new Date()
 let heros = ["Super man", "Spider man", "Bat man", true, []]
 
 
-
