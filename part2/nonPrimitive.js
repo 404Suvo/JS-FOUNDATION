@@ -13,11 +13,16 @@
 
 // console.log(typeof userName);
 
-let today = new Date()
+let today = new Date();
 // console.log(today);
 
 //Array
 
-let heros = ["Super man", "Spider man", "Bat man", true, []]
+let heros = ["Super man", "Spider man", "Bat man", true, []];
+// console.log(heros[1]);
 
+let isVlaue = "2subha";
+console.log(Number(isVlaue));
+console.log(Number(undefined));
+console.log(Number(null));
 
