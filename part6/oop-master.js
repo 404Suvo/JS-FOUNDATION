@@ -54,4 +54,110 @@ let myCar = new Car("Toyota", "Corolla");
 // console.log(myCar.drive());
 
 let vehOne = new vehicle("Toyota", "Corolla");
-console.log(vehOne.make);
+// console.log(vehOne.make);
+
+// Encapsulation
+
+class BabkAccount {
+    #balance = 0
+
+
+    deposit(amount){
+        this.#balance += amount
+        return this.#balance
+    }
+
+    getBalance(){
+        return `${this.#balance}$`
+    }
+}
+
+let account = new BabkAccount()
+// console.log(account.getBalance());
+
+// Abstraction
+
+class CoffeeMachine{
+    start(){
+        return `Starting the machine...`
+    }
+
+    brewCoffee(){
+        return `Brewing coffee`
+    }
+
+    pressStartButton(){
+        let msg1 = this.start()
+        let msg2 = this.brewCoffee()
+        return `${msg1} + ${msg2}`
+    }
+}
+
+let myMachine = new CoffeeMachine()
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+// console.log(myMachine.pressStartButton());
+
+// Polymorphism
+
+class Bird{
+
+    fly(){
+        return `Flying...`
+    }
+}
+
+class Penguin extends Bird {
+    fly(){
+        return `Penguin can't fly`
+    }
+}
+
+let bird = new Bird()
+let penguin = new Penguin();
+// console.log(bird.fly());
+// console.log(penguin.fly());
+
+// Static Method
+
+class Calculator{
+    static add(a, b){
+        return a+b
+    }
+}
+
+// let miniCal = new Calculator()
+// console.log(miniCal.add(2,4));
+
+// console.log(Calculator.add(2,4));
+
+// Getter and Setters 
+
+class Employee {
+
+    #salary;
+  constructor(name, salary) {
+    if (salary < 0) {
+        throw new Error("Salary cannot be negative");
+    }
+    this.name = name;
+    this.#salary = salary;
+  }
+  get salary() {
+    return `You are not allowed to see salary`;
+  }
+
+  set salary(value){
+    if (value < 0) {
+        console.error("Invalid salary");
+        
+    } else {
+        this._salary = value
+    }
+  }
+}
+
+
+let emp = new Employee("Alice", 5000)
+console.log(emp._salary);
+emp.salary = -6000
