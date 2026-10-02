@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM Fun Examples</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      font-family: "Times New Roman", serif;
+    }
+    .highlight {
+      background-color: yellow;
+      color: #000;
+    }
+    .selected {
+      font-weight: bold;
+      color: #4caf50;
+    }
+    .color-change {
+      color: #ff9800;
+      font-weight: bold;
+    }
+    li { cursor: default; }
+    #teaList li { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript DOM Fun Examples</h1>
+
+  <!-- 1. Accessing DOM Elements -->
+  <h2>Accessing DOM Elements</h2>
+  <p id="myParagraph">This is a paragraph. Click the button to change me!</p>
+  <button id="changeTextBtn">Change Text</button>
+
+  <!-- 2. Traversing the DOM -->
+  <h2>Traversing the DOM</h2>
+  <ul id="cityList">
+    <li>New York</li>
+    <li>Tokyo</li>
+    <li>Paris</li>
+    <li>London</li>
+  </ul>
+  <button id="highlightCityBtn">Highlight First City</button>
+
+  <!-- 3. Manipulating DOM Elements -->
+  <h2>Manipulating DOM Elements</h2>
+  <div id="order">Order: Latte</div>
+  <button id="changeOrderBtn">Change Order to Espresso</button>
+
+  <!-- 4. Creating and Inserting Elements -->
+  <h2>Creating and Inserting Elements</h2>
+  <button id="addItemBtn">Add a New Item to the Shopping List</button>
+  <ul id="shoppingList">
+    <li>Bread</li>
+    <li>Milk</li>
+  </ul>
+
+  <!-- 5. Removing DOM Elements -->
+  <h2>Removing DOM Elements</h2>
+  <ul id="taskList">
+    <li>Task 1</li>
+    <li>Task 2</li>
+    <li>Task 3</li>
+  </ul>
+  <button id="removeTaskBtn">Remove Last Task</button>
+
+  <!-- 6. Event Handling in the DOM -->
+  <h2>Event Handling in the DOM</h2>
+  <button id="clickMeBtn">Click Me!</button>
+
+  <!-- 7. Event Delegation -->
+  <h2>Event Delegation</h2>
+  <ul id="teaList">
+    <li class = "teaTeam">Green Tea</li>
+    <li class = "teaTeam">Black Tea</li>
+    <li class = "teaTeam">Oolong Tea</li>
+  </ul>
+  <p id="teaMessage">Click on any tea to select it!</p>
+
+  <!-- 8. Form Handling -->
+  <h2>Form Handling</h2>
+  <form id="feedbackForm">
+    <label for="feedback">Your Feedback:</label>
+    <input type="text" id="feedback" placeholder="Enter feedback">
+    <button type="submit">Submit Feedback</button>
+  </form>
+  <p id="feedbackDisply"></p>
+
+  <!-- 9. DOM Content Loaded -->
+  <h2>DOM Content Loaded</h2>
+  <p id="loadStatus">Waiting for DOM to load...</p>
+
+  <!-- 10. CSS Classes Manipulation -->
+  <h2>CSS Classes Manipulation</h2>
+  <p id="colorText">This text will change color!</p>
+  <button id="toggleHighlightBtn">Toggle Highlight</button>
+  <section>
+    <script src="./script.js"></script>
+  </section>
+</body>
+</html>
